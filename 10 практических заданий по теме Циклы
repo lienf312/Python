@@ -1,0 +1,164 @@
+
+
+
+# for i in range(5):
+#     while True:
+#         try:
+#             arv=float(input(f"Sisesta {i+1}arv"))
+#             break
+#         except:
+#             print("Kirjuta ainult numbrid")
+#             #2.5 int(2.5)=2
+#             if arv==int(arv):
+#                 taisarvud+=1 
+#         print("Taisarvude kogus: {taisarvud}")
+
+
+
+ # A = int(input("Sisestage arv A: "))
+ # summa = sum(range(1, A + 1))
+ # print(f"Kõigi naturaalarvude summa 1 kuni {A} on võrdne {summa}")
+
+
+
+# print("Ulesanne 5")
+# summa=0
+# while True:
+#      try:
+#          N=int(input("Sisesta N:"))
+#          if N>1:
+#              for i in range(1,N+1):
+#                  arv=float(input(f"Sisesta {i}. arv"))
+#                  if arv<0:
+#                      summa+=arv
+#              print(f"Summa vordub {summa}-ga")
+#              break
+#          else:
+#             print("arv A peab olema rohkem kui 1")
+#      except:
+#          print("Vale formaat")
+
+
+
+
+# print("Ulesanne 15")
+# for j in range(10):
+#     for i in range(10):
+#         print(i,end=" ")
+#     print()
+
+
+#1
+
+# arveee = 0
+# for i in range(15):
+#     while True:
+#         try:
+#             arv =float(input(f"Введите {i+1}, значение"))
+#             break
+#         except:
+#             print("Не число")
+
+#     if arv==int(arv):
+#         arveee += 1
+# print(f"Целых чисел: {arveee}")
+
+#2
+# ccc= 0
+# while True:
+#     try:
+#         a = int(input("Введите число: "))
+#         if a>1:
+#             for i in range(1, a + 1):
+#                 ccc += i
+#             print(f"Сумма:{ccc}")
+#             break
+#         else:
+#              print("Ne, ne to")
+#     except:
+#         print("Не тот формат")
+
+#3
+    # numb_arv = 0
+    # for i in range(0, 8):
+    #     while True:
+    #         try:
+    #             a = int(input("Введите число: "))
+    #             break   
+    #         except:
+    #             print("Не тот формат")
+    #     if a > 0:
+    #         numb_arv += a
+    #         print(f"Сумма: {numb_arv}")
+
+#4
+
+# for i in range(10, 21):
+#     print(i ** 2, end= ",")
+
+#5
+
+# summ = 0
+# while True:
+#     try:
+#         n = int(input("Введите число: "))
+#         if n>1:
+#             for i in range(1, n + 1):
+#                 arv= float(input(f"Введите {i}, значение: "))
+#                 if arv < 0:
+#                     summ += arv
+#             print(f"Сумма:{summ}")
+#             break
+#         else:
+#             print("Ne, ne to")
+#     except:
+#         print("Не тот формат")
+
+#6
+
+# plus = 0
+# minus = 0
+# null = 0
+# while True:
+#     try:
+#         n = int(input("Введите число: "))
+#         if n>1:
+#             for i in range(1, n + 1):
+#                 arv= float(input(f"Введите {i}, значение: "))
+#                 if arv < 0:
+#                     minus += 1
+#                 elif arv > 0:
+#                     plus += 1
+#                 else:
+#                     null += 1
+#             print(f"Положительных:{plus}, Отрицательных:{minus}, Нулей:{null}")
+#             break
+#         else:
+#             print("Ne, ne to")
+#     except:
+#         print("Не тот формат")
+
+#7
+
+# a = int(input("Введите начало: "))
+# b = int(input("Введите конец: "))
+# k = int(input("Введите чему кратно : "))
+
+# for i in range(a, b + 1):
+#     if i % k == 0:
+#         print(i, end=", ")
+
+#8
+
+# for i in range(1, 20 + 1):
+#      if i > 0:
+#         print(i * 2.5, end=", ")
+
+#9
+
+eur = input("Введите число деняк: ")
+years = int(input("Введите количество лет: "))
+
+for i in range(1, years + 1):
+    eur = float(eur) * 1.03
+    print(f"Год {i}: {eur}")
