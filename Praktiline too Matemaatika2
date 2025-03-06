@@ -1,0 +1,74 @@
+import random
+
+
+def generate_question(difficulty):
+    
+    if difficulty == 1:
+        number_range = 10
+    elif difficulty == 2:
+        number_range = 20
+    else:
+        number_range = 50
+
+    
+    num1 = random.randint(1, number_range)
+    num2 = random.randint(1, number_range)
+
+    
+    operator = random.choice(['+', '-', '*', '/'])
+
+    question = f"{num1} {operator} {num2}"
+
+    
+    if operator == '+':
+        correct_answer = num1 + num2
+    elif operator == '-':
+        correct_answer = num1 - num2
+    elif operator == '*':
+        correct_answer = num1 * num2
+    elif operator == '/':
+        
+        while num2 == 0:
+            num2 = random.randint(1, number_range)
+        correct_answer = num1 / num2
+
+    return question, correct_answer
+
+
+def check_answer(user_answer, correct_answer):
+    try:
+        return float(user_answer) == correct_answer
+    except ValueError:
+        return False
+
+
+def choose_difficulty():
+    print("Выберите уровень сложности:")
+    print("1. Легкий")
+    print("2. Средний")
+    print("3. Сложный")
+    difficulty = int(input("Введите номер сложности (1, 2 или 3): "))
+    return difficulty
+
+
+def math_quiz():
+    
+    difficulty = choose_difficulty()
+
+    
+    question, correct_answer = generate_question(difficulty)
+
+    print(f"Вопрос: {question}")
+    
+    
+    user_answer = input("Ваш ответ: ")
+
+    
+    if check_answer(user_answer, correct_answer):
+        print("Правильно!")
+    else:
+        print(f"Неправильно. Правильный ответ: {correct_answer}")
+
+
+if __name__ == "__main__":
+    math_quiz()
