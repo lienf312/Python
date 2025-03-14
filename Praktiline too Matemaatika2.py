@@ -4,7 +4,11 @@ print("Выберите уровень сложности:")
 print("1. Легкий")
 print("2. Средний")
 print("3. Сложный")
+try:
 difficulty = int(input("Введите номер сложности (1, 2 или 3): "))
+
+except ValueError:
+    print("Ошибка: Введите целое число (1, 2 или 3).")
 
 if difficulty == 1:
     number_range = 10
@@ -35,10 +39,8 @@ print(f"Вопрос: {question}")
 
 user_answer = input("Ваш ответ: ")
 
-try:
+
     if float(user_answer) == correct_answer:
         print("Правильно!")
     else:
         print(f"Неправильно. Правильный ответ: {correct_answer}")
-except ValueError:
-    print("Неправильный формат ответа.")
