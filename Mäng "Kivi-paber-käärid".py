@@ -5,7 +5,6 @@ player2 = "Робот"
 
 choices = ["Камень", "Ножницы", "Бумага"]
 
-
 player1_score = 0
 player2_score = 0
 
@@ -14,17 +13,17 @@ rounds = 5
 for round_num in range(1, rounds + 1):
     print(f"Раунд {round_num}")
     
-    #человек
+    # человек
     player1_choice = input("Ваш выбор (Камень, Ножницы, Бумага): ").capitalize()
     while player1_choice not in choices:
         print("Неверный ввод! Попробуйте снова.")
         player1_choice = input("Ваш выбор (Камень, Ножницы, Бумага): ").capitalize()
     
-    #робот 
+    # робот 
     player2_choice = random.choice(choices)
     print(f"Робот выбрал: {player2_choice}")
     
-    #победитель
+    # победитель
     if player1_choice == player2_choice:
         result = "Ничья"
     elif (player1_choice == "Камень" and player2_choice == "Ножницы") or \
@@ -38,7 +37,7 @@ for round_num in range(1, rounds + 1):
 
     print(f"Результат: {result}")
 
-#результаты
+# результаты
 print(f"\nИтоговый счёт: {player1} - {player1_score} очков, {player2} - {player2_score} очков")
 
 if player1_score > player2_score:
