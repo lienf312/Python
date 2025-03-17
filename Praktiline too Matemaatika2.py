@@ -5,7 +5,7 @@ print("1. Легкий")
 print("2. Средний")
 print("3. Сложный")
 try:
-difficulty = int(input("Введите номер сложности (1, 2 или 3): "))
+    difficulty = int(input("Введите номер сложности (1, 2 или 3): "))
 
 except ValueError:
     print("Ошибка: Введите целое число (1, 2 или 3).")
@@ -31,7 +31,7 @@ elif operator == '-':
 elif operator == '*':
     correct_answer = num1 * num2
 elif operator == '/':
-    while num2 == 0: 
+    while num2 == 0:
         num2 = random.randint(1, number_range)
     correct_answer = num1 / num2
 
@@ -39,8 +39,7 @@ print(f"Вопрос: {question}")
 
 user_answer = input("Ваш ответ: ")
 
-
-    if float(user_answer) == correct_answer:
-        print("Правильно!")
-    else:
-        print(f"Неправильно. Правильный ответ: {correct_answer}")
+if float(user_answer) == correct_answer:
+    print("Правильно!")
+else:
+    print(f"Неправильно. Правильный ответ: {correct_answer}")
