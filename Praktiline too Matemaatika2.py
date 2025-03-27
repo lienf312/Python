@@ -6,6 +6,11 @@ print("2. Средний")
 print("3. Сложный")
 try:
     difficulty = int(input("Введите номер сложности (1, 2 или 3): "))
+    
+    if difficulty in [1, 2, 3]:
+    print("Число верное")
+else:
+    print("Число неверное")
 
 except ValueError:
     print("Ошибка: Введите целое число (1, 2 или 3).")
