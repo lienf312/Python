@@ -69,3 +69,22 @@ tulemus = Label(aken, text="Решение", bg="yellow", font=("Arial", 12), wi
 tulemus.pack(pady=20)
 
 aken.mainloop()
+
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-8, 13, 50)
+
+y = (x - 2.5)**2
+
+plt.plot(x, y, 'bo') # 'bo' - синве кружочки
+plt.plot(2.5, 0, 'go') 
+
+plt.title("Квадратное уравнение")
+plt.xlabel("x")
+plt.ylabel("y")
+
+
